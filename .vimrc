@@ -96,4 +96,5 @@ map g# <Plug>(incsearch-nohl-g#)
 
 "" a.vim
 let g:alternateSearchPath = 'sfr:../Interface,sfr:../Implementation,reg:/Implementation/Interface/g/,reg:/Interface/Implementation/g/'
+let g:alternateNoDefaultAlternate = 1
 map <C-a> :A<CR>
