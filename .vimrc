@@ -9,7 +9,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mileszs/ack.vim'
 Plugin 'haya14busa/incsearch.vim'
@@ -49,6 +49,8 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+set laststatus=2
+set statusline+=%f
 set relativenumber
 set number
 set expandtab
@@ -67,7 +69,7 @@ autocmd BufWritePre * %s/\s\+$//e
 "highlight OverLength ctermbg=232
 "match OverLength /\%101v.\+/
 vmap <C-c> "+y
-vmap <C-v> "+p
+map <C-v> "+p
 
 "" NERDTree
 " For mouse click in NERDTree
