@@ -16,8 +16,6 @@ Plugin 'haya14busa/incsearch.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'iamcco/markdown-preview.vim'
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -62,6 +60,7 @@ set undofile
 set cino=g0(0N-s
 set completeopt-=preview
 set cursorline
+set ignorecase
 highlight ColorColumn ctermbg=234 ctermfg=088
 let &colorcolumn=join(range(101,999),",")
 highlight CursorLine cterm=NONE ctermbg=234
@@ -99,3 +98,10 @@ map g# <Plug>(incsearch-nohl-g#)
 let g:alternateSearchPath = 'sfr:../Interface,sfr:../Implementation,reg:/Implementation/Interface/g/,reg:/Interface/Implementation/g/'
 let g:alternateNoDefaultAlternate = 1
 map <C-a> :A<CR>
+
+"" ctags
+map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extras=+fq .<CR>
+
+"" ctrp
+let g:ctrlp_max_files = 1000000
+set wildignore+=Build/Output/*,*.un~
