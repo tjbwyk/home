@@ -83,6 +83,7 @@ let g:NERDTreeMouseMode=3
 map <C-n> :NERDTreeToggle<CR>
 
 "" YCM
+let g:ycm_python_binary_path = 'python'
 
 "" incsearch
 map /  <Plug>(incsearch-forward)
