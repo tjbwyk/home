@@ -69,7 +69,11 @@ match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd BufWritePre * %s/\s\+$//e
 "highlight OverLength ctermbg=232
 "match OverLength /\%101v.\+/
-vmap <C-c> "+y
+vmap <C-S-c> "+y
+nmap <silent> <C-k> :wincmd k<CR>
+nmap <silent> <C-j> :wincmd j<CR>
+nmap <silent> <C-h> :wincmd h<CR>
+nmap <silent> <C-l> :wincmd l<CR>
 
 "" NERDTree
 " For mouse click in NERDTree
@@ -102,6 +106,6 @@ map <C-a> :A<CR>
 "" ctags
 map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extras=+fq .<CR>
 
-"" ctrp
+"" ctrlp
 let g:ctrlp_max_files = 1000000
 set wildignore+=Build/Output/*,*.un~
