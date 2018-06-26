@@ -105,7 +105,7 @@ let g:alternateNoDefaultAlternate = 1
 map <C-a> :A<CR>
 
 "" ctags
-map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extras=+fq .<CR>
+map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extras=+fq --exclude={Build,.git} .<CR>
 
 "" ctrlp
 let g:ctrlp_max_files = 1000000
