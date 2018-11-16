@@ -91,6 +91,7 @@ let g:NERDTreeMouseMode=3
 map <C-n> :NERDTreeToggle<CR>
 
 "" YCM
+let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
 let g:ycm_python_binary_path = 'python'
 
 "" incsearch
@@ -115,5 +116,5 @@ map <C-a> :A<CR>
 map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extras=+fq --exclude={Build,.git} .<CR>
 
 "" ctrlp
-let g:ctrlp_max_files = 1000000
-set wildignore+=Build/Output/*,*.un~
+let g:ctrlp_max_files = 100000
+set wildignore+=*/Build/Output/*
