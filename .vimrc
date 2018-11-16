@@ -57,9 +57,11 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 set undofile
-set cino=g0(0N-s
+set cindent
+set cino=g0,(0,+4,N-s
 set completeopt-=preview
 set cursorline
+set nowrap
 highlight ColorColumn ctermbg=234 ctermfg=088
 let &colorcolumn=join(range(101,999),",")
 highlight CursorLine cterm=NONE ctermbg=234
@@ -68,11 +70,16 @@ match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd BufWritePre * %s/\s\+$//e
 "highlight OverLength ctermbg=232
 "match OverLength /\%101v.\+/
-vmap <C-S-c> "+y
+vmap <C-c> "+y
 nmap <silent> <C-k> :wincmd k<CR>
 nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-l> :wincmd l<CR>
+
+nmap <silent> <C-UP> :wincmd +<CR>
+nmap <silent> <C-DOWN> :wincmd -<CR>
+nmap <silent> <C-LEFT> :wincmd <<CR>
+nmap <silent> <C-RIGHT> :wincmd ><CR>
 
 "" NERDTree
 " For mouse click in NERDTree
