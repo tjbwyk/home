@@ -10,12 +10,15 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'rdnetto/YCM-Generator'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mileszs/ack.vim'
 Plugin 'haya14busa/incsearch.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'iamcco/markdown-preview.vim'
+Plugin 'vim-scripts/a.vim'
+Plugin 'dracula/vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -49,6 +52,8 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+syntax on
+colorscheme dracula
 set laststatus=2
 set statusline+=%f
 set relativenumber
@@ -81,6 +86,9 @@ nmap <silent> <C-DOWN> :wincmd -<CR>
 nmap <silent> <C-LEFT> :wincmd <<CR>
 nmap <silent> <C-RIGHT> :wincmd ><CR>
 
+"" ctags
+map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+
 "" NERDTree
 " For mouse click in NERDTree
 if has('mouse')
@@ -108,4 +116,4 @@ map g# <Plug>(incsearch-nohl-g#)
 "" a.vim
 "let g:alternateSearchPath = 'sfr:../Interface,sfr:../Implementation,reg:/Implementation/Interface/g/,reg:/Interface/Implementation/g/'
 "let g:alternateNoDefaultAlternate = 1
-"map <C-a> :A<CR>
+map <C-a> :A<CR>
