@@ -13,7 +13,6 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mileszs/ack.vim'
-Plugin 'haya14busa/incsearch.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'iamcco/markdown-preview.vim'
@@ -66,6 +65,7 @@ set cindent
 set cino=g0,(0,+4,N-s
 set completeopt-=preview
 set cursorline
+"set ignorecase
 set nowrap
 highlight ColorColumn ctermbg=234 ctermfg=088
 let &colorcolumn=join(range(101,999),",")
@@ -86,9 +86,6 @@ nmap <silent> <C-DOWN> :wincmd -<CR>
 nmap <silent> <C-LEFT> :wincmd <<CR>
 nmap <silent> <C-RIGHT> :wincmd ><CR>
 
-"" ctags
-map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
-
 "" NERDTree
 " For mouse click in NERDTree
 if has('mouse')
@@ -98,22 +95,17 @@ let g:NERDTreeMouseMode=3
 map <C-n> :NERDTreeToggle<CR>
 
 "" YCM
+let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
 let g:ycm_python_binary_path = 'python'
 
-"" incsearch
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
-set hlsearch
-let g:incsearch#auto_nohlsearch = 1
-map n  <Plug>(incsearch-nohl-n)
-map N  <Plug>(incsearch-nohl-N)
-map *  <Plug>(incsearch-nohl-*)
-map #  <Plug>(incsearch-nohl-#)
-map g* <Plug>(incsearch-nohl-g*)
-map g# <Plug>(incsearch-nohl-g#)
-
 "" a.vim
-"let g:alternateSearchPath = 'sfr:../Interface,sfr:../Implementation,reg:/Implementation/Interface/g/,reg:/Interface/Implementation/g/'
-"let g:alternateNoDefaultAlternate = 1
+let g:alternateSearchPath = 'sfr:../Interface,sfr:../Implementation,reg:/Implementation/Interface/g/,reg:/Interface/Implementation/g/'
+let g:alternateNoDefaultAlternate = 1
 map <C-a> :A<CR>
+
+"" ctags
+map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extras=+fq --exclude={Build,.git} .<CR>
+
+"" ctrlp
+let g:ctrlp_max_files = 100000
+set wildignore+=*/Build/Output/*
