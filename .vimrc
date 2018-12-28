@@ -13,7 +13,6 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mileszs/ack.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'iamcco/markdown-preview.vim'
 Plugin 'vim-scripts/a.vim'
@@ -106,6 +105,3 @@ map <C-a> :A<CR>
 "" ctags
 map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extras=+fq --exclude={Build,.git} .<CR>
 
-"" ctrlp
-let g:ctrlp_max_files = 100000
-set wildignore+=*/Build/Output/*
