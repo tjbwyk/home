@@ -17,7 +17,7 @@ Plugin 'haya14busa/incsearch.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'iamcco/markdown-preview.vim'
 Plugin 'vim-scripts/a.vim'
-Plugin 'dracula/vim'
+Plugin 'sickill/vim-monokai'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -52,7 +52,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 syntax on
-"colorscheme dracula
+colorscheme monokai
 set laststatus=2
 set statusline+=%f
 set relativenumber
@@ -93,7 +93,7 @@ if has('mouse')
 endif
 let g:NERDTreeMouseMode=3
 map <C-n> :NERDTreeToggle<CR>
-map <C-m> :NERDTreeFind<CR>
+map <C-W> :NERDTreeFind<CR>
 
 "" YCM
 let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
