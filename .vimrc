@@ -67,6 +67,8 @@ set completeopt-=preview
 set cursorline
 "set ignorecase
 set nowrap
+set splitbelow
+set termwinsize=10x0
 highlight ColorColumn ctermbg=234 ctermfg=088
 let &colorcolumn=join(range(101,999),",")
 highlight CursorLine cterm=NONE ctermbg=234
@@ -87,6 +89,8 @@ nmap <silent> <C-LEFT> :wincmd <<CR>
 nmap <silent> <C-RIGHT> :wincmd ><CR>
 
 nmap <silent> <C-u> :redo<CR>
+
+nmap <silent> <C-t> :bel term<CR>
 
 "" NERDTree
 " For mouse click in NERDTree
