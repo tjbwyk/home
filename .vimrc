@@ -18,6 +18,7 @@ Plugin 'iamcco/markdown-preview.vim'
 Plugin 'vim-scripts/a.vim'
 Plugin 'sickill/vim-monokai'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'rhysd/vim-clang-format'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -126,3 +127,5 @@ map <C-a> :A<CR>
 "" ctags
 map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extras=+fq --exclude={Build,.git} .<CR>
 
+"" vim-clang-format
+map <F5> :ClangFormat<CR>
