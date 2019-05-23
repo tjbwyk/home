@@ -14,10 +14,10 @@ Plugin 'rdnetto/YCM-Generator'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mileszs/ack.vim'
 Plugin 'haya14busa/incsearch.vim'
-Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'iamcco/markdown-preview.vim'
 Plugin 'vim-scripts/a.vim'
 Plugin 'sickill/vim-monokai'
+Plugin 'sheerun/vim-polyglot'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
