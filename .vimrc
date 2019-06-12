@@ -89,8 +89,6 @@ nmap <silent> <C-DOWN> :wincmd -<CR>
 nmap <silent> <C-LEFT> :wincmd <<CR>
 nmap <silent> <C-RIGHT> :wincmd ><CR>
 
-nmap <silent> <C-u> :redo<CR>
-
 nmap <silent> <C-t> :bel term<CR>
 
 "" NERDTree
@@ -100,7 +98,7 @@ if has('mouse')
 endif
 let g:NERDTreeMouseMode=3
 map <C-n> :NERDTreeToggle<CR>
-map <C-r> :NERDTreeFind<CR>
+map <C-q> :NERDTreeFind<CR>
 
 "" YCM
 let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
