@@ -98,7 +98,7 @@ if has('mouse')
 endif
 let g:NERDTreeMouseMode=3
 map <C-n> :NERDTreeToggle<CR>
-map <C-q> :NERDTreeFind<CR>
+map <C-m> :NERDTreeFind<CR>
 
 "" YCM
 let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
