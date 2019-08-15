@@ -103,6 +103,7 @@ map <C-y> :NERDTreeFind<CR>
 "" YCM
 let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
 let g:ycm_python_binary_path = 'python'
+map <F9> :YcmCompleter FixIt<CR>
 
 "" incsearch
 map /  <Plug>(incsearch-forward)
@@ -118,7 +119,7 @@ map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
 
 "" a.vim
-let g:alternateSearchPath = 'sfr:../Interface,sfr:../Implementation,reg:/Implementation/Interface/g/,reg:/Interface/Implementation/g/'
+let g:alternateSearchPath = 'sfr:../Interface,sfr:../Implementation,reg:/Implementation/Interface/g/,reg:/Interface/Implementation/g/,sft:../Interface/TomTom/NavKit/MapMatcher,sft:../Interface/TomTom/NavKit/DrivingContext'
 let g:alternateNoDefaultAlternate = 1
 map <C-a> :A<CR>
 
