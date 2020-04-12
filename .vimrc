@@ -19,6 +19,7 @@ Plugin 'vim-scripts/a.vim'
 Plugin 'sickill/vim-monokai'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'rhysd/vim-clang-format'
+Plugin 'lervag/vimtex'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -117,6 +118,10 @@ map *  <Plug>(incsearch-nohl-*)
 map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
+
+"" vintex
+let g:polyglot_disabled = ['latex']
+let g:vimtex_view_general_viewer = 'okular --unique'
 
 "" a.vim
 let g:alternateSearchPath = 'sfr:../Interface,sfr:../Implementation,reg:/Implementation/Interface/g/,reg:/Interface/Implementation/g/,sft:../Interface/TomTom/NavKit/MapMatcher,sft:../Interface/TomTom/NavKit/DrivingContext'
