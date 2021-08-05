@@ -82,24 +82,19 @@ autocmd BufWritePre * %s/\s\+$//e
 "highlight OverLength ctermbg=232
 "match OverLength /\%101v.\+/
 vmap <C-c> "+y
-nmap <silent> <C-k> :wincmd k<CR>
-nmap <silent> <C-j> :wincmd j<CR>
-nmap <silent> <C-h> :wincmd h<CR>
-nmap <silent> <C-l> :wincmd l<CR>
-
-nmap <silent> <C-UP> :wincmd +<CR>
-nmap <silent> <C-DOWN> :wincmd -<CR>
-nmap <silent> <C-LEFT> :wincmd <<CR>
-nmap <silent> <C-RIGHT> :wincmd ><CR>
+nmap <silent> <C-k> :wincmd +<CR>
+nmap <silent> <C-j> :wincmd -<CR>
+nmap <silent> <C-h> :wincmd <<CR>
+nmap <silent> <C-l> :wincmd ><CR>
 
 nmap <silent> <C-t> :bel term<CR>
 
 "" NERDTree
 " For mouse click in NERDTree
-if has('mouse')
-  set mouse=a
-endif
-let g:NERDTreeMouseMode=3
+"if has('mouse')
+"  set mouse=a
+"endif
+"let g:NERDTreeMouseMode=3
 map <C-n> :NERDTreeToggle<CR>
 map <C-y> :NERDTreeFind<CR>
 
