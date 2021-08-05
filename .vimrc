@@ -71,6 +71,8 @@ set cursorline
 set nowrap
 set splitbelow
 set termwinsize=10x0
+set visualbell
+set t_vb=
 highlight ColorColumn ctermbg=234 ctermfg=088
 let &colorcolumn=join(range(101,999),",")
 highlight CursorLine cterm=NONE ctermbg=234
