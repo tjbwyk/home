@@ -9,6 +9,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'sheerun/vim-polyglot'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'scrooloose/nerdtree'
@@ -17,7 +18,6 @@ Plugin 'haya14busa/incsearch.vim'
 Plugin 'iamcco/markdown-preview.vim'
 Plugin 'vim-scripts/a.vim'
 Plugin 'sickill/vim-monokai'
-Plugin 'sheerun/vim-polyglot'
 Plugin 'rhysd/vim-clang-format'
 Plugin 'lervag/vimtex'
 
@@ -101,6 +101,7 @@ map <C-y> :NERDTreeFind<CR>
 "" YCM
 let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
 let g:ycm_python_binary_path = 'python'
+map <C-]> :YcmCompleter GoTo<CR>
 map <F9> :YcmCompleter FixIt<CR>
 
 "" incsearch
@@ -121,12 +122,13 @@ let g:polyglot_disabled = ['latex']
 let g:vimtex_view_general_viewer = 'okular --unique'
 
 "" a.vim
-let g:alternateSearchPath = 'sfr:../Interface,sfr:../Implementation,reg:/Implementation/Interface/g/,reg:/Interface/Implementation/g/,sft:../Interface/TomTom/NavKit/MapMatcher,sft:../Interface/TomTom/NavKit/DrivingContext'
+"let g:alternateSearchPath = 'sfr:../Interface,sfr:../Implementation,reg:/Implementation/Interface/g/,reg:/Interface/Implementation/g/,sft:../Interface/TomTom/NavKit/MapMatcher,sft:../Interface/TomTom/NavKit/DrivingContext'
 let g:alternateNoDefaultAlternate = 1
 map <C-a> :A<CR>
 
 "" ctags
-map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extras=+fq --exclude={Build,.git} .<CR>
+let g:ycm_collect_identifiers_from_tags_files = 1
+map <F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extras=+fq --exclude={Build,.git,build} .<CR>
 
 "" vim-clang-format
 map <F5> :ClangFormat<CR>
